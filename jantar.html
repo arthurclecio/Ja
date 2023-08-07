@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Jantar</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7ede2;
+      color: #383838;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      color: #e52e1a;
+    }
+
+    button {
+      font-size: 1em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #e52e1a;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e52e1a;
+      opacity: 0.8;
+    }
+  </style>
+  <script>
+    function calcularTotal() {
+      const jantar = Number(document.getElementById("valorJantar").value);
+      const garcom = jantar * 0.10;
+      const total = jantar + garcom;
+
+      const resultado = `Taxa garçom: R$ ${garcom.toFixed(2)}\nTotal: R$ ${total.toFixed(2)}`;
+      alert(resultado);
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculadora de Jantar</h1>
+
+  <label for="valorJantar">Valor do Jantar:</label>
+  <input type="number" id="valorJantar" step="0.01"><br><br>
+
+  <button onclick="calcularTotal()">Calcular</button><br><br>
+</body>
+</html>
